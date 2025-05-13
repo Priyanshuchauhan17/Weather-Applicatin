@@ -18,17 +18,51 @@
             </button>
             <span class="nav-title">Weather App</span>
             <nav class="nav-links">
-                <ul>
+                <ul id="mobile-menu">
                     <li><a href="#" class="active">Home</a></li>
                     <li><a href="#">API</a></li>
                     <li><a href="https://github.com/Priyanshuchauhan17">Dashboard</a></li>
                     <li><a href="#">Maps</a></li>
                     <li><a href="#">Blog</a></li>
-                    <li class="menu-icon"><i class="ri-menu-line"></i></li>
                 </ul>
             </nav>
+            <div class="menu-icon"><i class="ri-menu-line"></i></div>
         </div>
     </header>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.querySelector('.menu-icon');
+
+        menuIcon.addEventListener('click', () => {
+            mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    mobileMenu.style.display = 'none';
+                }
+            });
+        });
+
+        if (window.innerWidth > 768) {
+            mobileMenu.style.display = 'flex';
+        } else {
+             mobileMenu.style.display = 'none';
+        }
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                mobileMenu.style.display = 'flex';
+            } else {
+                mobileMenu.style.display = 'none';
+            }
+        });
+
+        // ... your existing JavaScript ...
+    </script>
 
     <main class="container">
         <div class="card">
