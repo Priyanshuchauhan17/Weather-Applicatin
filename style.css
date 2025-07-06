@@ -313,9 +313,16 @@ body {
         flex-direction: column;
         align-items: stretch;
     }
+    .search-button {
+        width: 60px;
+        position: absolute;
+        top: 125px;
+
+    }
 
     .search-input {
         margin-right: 0;
+        width:233px;
         margin-bottom: 10px;
     }
 
