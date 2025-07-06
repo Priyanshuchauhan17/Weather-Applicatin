@@ -314,9 +314,12 @@ body {
         align-items: stretch;
     }
     .search-button {
-        width: 60px;
+        width: 52px;
         position: absolute;
-        top: 125px;
+        top: 130px;
+        height: 52px;
+        right: 40px;
+
 
     }
 
